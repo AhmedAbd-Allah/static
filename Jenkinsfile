@@ -6,9 +6,9 @@ pipeline {
                 retry(3){
                     withAWS(region:'us-west-2', credentials:'aws-static'){
                     s3Upload(file:'index.html', bucket:'ahmed-abdallah-jenkins', path:'')
-                }                             
-            }
-        }
+                        }                             
+                    }
+                }
         // stage('Build') {
         //     steps {
         //         sh 'echo "Hello World"'
@@ -18,5 +18,6 @@ pipeline {
         //         '''
         //     }
         // }
+        }
     }
 }
